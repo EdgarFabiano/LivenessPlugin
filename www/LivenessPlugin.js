@@ -4,7 +4,12 @@ exports.coolMethod = function (arg0, success, error) {
     exec(success, error, 'LivenessPlugin', 'coolMethod', [arg0]);
 };
 
-exports.initialize = function () {
+exports.capture = function (success, error) {
+    console.log('capturing');
+    exec(success, error, 'LivenessPlugin', 'capture');
+};
+
+function initialize() {
     exec(
         () => {},
         () => console.log('init error'),
@@ -14,7 +19,7 @@ exports.initialize = function () {
       );
 };
 
-exports.setThreshold = function (thresholdOption) {
+function setThreshold(thresholdOption) {
     if(thresholdOption === null or thresholdOption === undefined) {
         thresholdOption = "balanced_very_high";
     }
@@ -27,7 +32,7 @@ exports.setThreshold = function (thresholdOption) {
       );
 };
 
-exports.setCamera = function (cameraOption) {
+function setCamera(cameraOption) {
     if(cameraOption === null or cameraOption === undefined) {
         cameraOption = "front";
     }
@@ -38,9 +43,4 @@ exports.setCamera = function (cameraOption) {
         "setCamera",
         [cameraOption]
       );
-};
-
-exports.capture = function (success, error) {
-    console.log('capturing');
-    exec(success, error, 'LivenessPlugin', 'capture');
 };
