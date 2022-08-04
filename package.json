@@ -1,0 +1,17 @@
+{
+  "name": "com-livenesscreate-plugins-captureswift",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "com-livenesscreate-plugins-captureswift",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "lovelini rawat",
+  "license": "ISC"
+}

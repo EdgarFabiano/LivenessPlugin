@@ -1,0 +1,3 @@
+-keep class com.identy.** { *; }
+-keep class org.identy.** { *; }
+-keep class ar.com.nec.** { *; }

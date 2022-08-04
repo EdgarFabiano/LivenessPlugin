@@ -1,0 +1,21 @@
+repositories {
+  maven {
+    url 'https://mvn-repository.neclatam-cloud.com/repository/maven-releases/'
+    credentials {
+        username 'serpro'
+        password 'G6hj7IdEN6598VbmwQDX'
+    }
+  }
+}
+
+android {
+  buildTypes {
+    release {
+      proguardFile 'proguard-liveness.txt'
+    }
+  }
+}
+
+dependencies {
+  implementation('ar.com.nec.flow:face-liveness-offline:2.0.20')
+}

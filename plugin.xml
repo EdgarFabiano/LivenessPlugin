@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-livenesscreate-plugins-captureswift" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>LivenessPlugin</name>
+    <js-module name="LivenessPlugin" src="www/LivenessPlugin.js">
+    <clobbers target="LivenessPlugin" />
+</js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="LivenessPlugin">
+                <param name="ios-package" value="LivenessPlugin" />
+            </feature>
+        </config-file>
+        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+        <source-file src="src/ios/LivenessPlugin.swift" />
+        <podspec>
+            <config>
+                <source url="https://bitbucket.org/neclatam/specs.git"/>
+                <source url="https://cdn.cocoapods.org"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="NECFlowLiveness"/>
+            </pods>
+        </podspec>
+    </platform>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="LivenessPlugin">
+                <param name="android-package" value="ar.com.nec.plugin.LivenessPlugin"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/LivenessPlugin.java" target-dir="src/ar/com/nec/plugin" />
+        <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
+        <resource-file src="src/android/proguard-liveness.txt" target="proguard-liveness.txt" />
+    </platform>
+</plugin>
