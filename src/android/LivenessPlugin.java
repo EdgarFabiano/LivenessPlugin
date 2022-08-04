@@ -65,8 +65,8 @@ public class LivenessPlugin extends CordovaPlugin implements NecFlowHandler {
         }
 
         flow.setHandler(this);
-        flow.setEndpoint("https://onboarding-demo.neclatam-cloud.com:9084");
-        flow.setTokenPath("https://onboarding-demo.neclatam-cloud.com:8070/auth/realms/obiqid-devel/protocol/openid-connect/token");
+        flow.setEndpoint("https://hom.liveness.serpro.gov.br:7044");
+        flow.setTokenPath("https://hom.liveness.serpro.gov.br:7080/auth/realms/serpro_qa/protocol/openid-connect/token");
         flow.setClientId("mobile-app", "e5263862-639c-4a12-91ca-be26af8e1c0e");
         flow.setGroup("Cordova-Android");
         flow.initialize(cordova.getActivity(), "1377br.gov.meugovbr.hom.lic", (flow) -> {

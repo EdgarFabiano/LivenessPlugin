@@ -65,8 +65,8 @@ import AVKit
         flow = NecFlow()
         flow.group = "Cordova-iOS"
         flow.delegate = self
-        flow.endpoint = "https://onboarding-demo.neclatam-cloud.com:9084"
-        flow.tokenPath = "https://onboarding-demo.neclatam-cloud.com:8070/auth/realms/obiqid-devel/protocol/openid-connect/token"
+        flow.endpoint = "https://hom.liveness.serpro.gov.br:7044"
+        flow.tokenPath = "https://hom.liveness.serpro.gov.br:7080/auth/realms/serpro_qa/protocol/openid-connect/token"
         flow.setClientId("mobile-app", secret: "e5263862-639c-4a12-91ca-be26af8e1c0e")
         
         let license = Bundle.main.path(forResource: "1999_ar.com.nec.face.liveness.offline.demo", ofType: "lic")
