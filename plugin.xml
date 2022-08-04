@@ -29,7 +29,7 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-        
+
         <config-file target="AndroidManifest.xml" parent="application">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
             <uses-permission android:name="android.permission.CAMERA" />
