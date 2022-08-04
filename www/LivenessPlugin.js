@@ -8,39 +8,3 @@ exports.capture = function (success, error) {
     console.log('capturing');
     exec(success, error, 'LivenessPlugin', 'capture');
 };
-
-function initialize() {
-    exec(
-        () => {},
-        () => console.log('init error'),
-        "LivenessPlugin",
-        "initialize",
-        []
-      );
-};
-
-function setThreshold(thresholdOption) {
-    if(thresholdOption === null or thresholdOption === undefined) {
-        thresholdOption = "balanced_very_high";
-    }
-    exec(
-        () => {},
-        () => {},
-        "LivenessPlugin",
-        "setThreshold",
-        [thresholdOption]
-      );
-};
-
-function setCamera(cameraOption) {
-    if(cameraOption === null or cameraOption === undefined) {
-        cameraOption = "front";
-    }
-    exec(
-        () => {},
-        () => {},
-        "LivenessPlugin",
-        "setCamera",
-        [cameraOption]
-      );
-};
