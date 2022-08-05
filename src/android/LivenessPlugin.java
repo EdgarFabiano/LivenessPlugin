@@ -55,7 +55,9 @@ public class LivenessPlugin extends CordovaPlugin implements NecFlowHandler {
     private void capture() {
         try {
             flow.capture(cordova.getActivity());
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void initialize() {
