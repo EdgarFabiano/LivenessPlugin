@@ -34,7 +34,7 @@
         <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
         <resource-file src="src/android/proguard-liveness.txt" target="proguard-liveness.txt" />
 
-        <resource-file src="lic/1010_ar.com.nec.liveness.demo2021-04-30 00_00_00.lic" target="app/src/main/assets/1010_ar.com.nec.liveness.demo2021-04-30 00_00_00.lic" />
-        <resource-file src="lic/1377br.gov.meugovbr.hom.lic" target="app/src/main/assets/1377br.gov.meugovbr.hom.lic" />
+        <resource-file src="lic/1010_ar.com.nec.liveness.demo2021-04-30 00_00_00.lic" target="assets/1010_ar.com.nec.liveness.demo2021-04-30 00_00_00.lic" />
+        <resource-file src="lic/1377br.gov.meugovbr.hom.lic" target="assets/1377br.gov.meugovbr.hom.lic" />
     </platform>
 </plugin>
