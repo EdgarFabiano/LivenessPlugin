@@ -68,9 +68,14 @@ public class LivenessPlugin extends CordovaPlugin implements NecFlowHandler {
         flow.setTokenPath("https://onboarding-demo.neclatam-cloud.com:8070/auth/realms/obiqid-devel/protocol/openid-connect/token");
         flow.setClientId("mobile-app", "e5263862-639c-4a12-91ca-be26af8e1c0e");
         flow.setGroup("Cordova-Android");
-        Log.println(Log.ASSERT, "ASSETS", "Assets:");
-        for (String l : cordova.getActivity().getAssets().list(""))
-            Log.println(Log.ASSERT, "ASSETS", "\t" + l);
+        try {
+            Log.println(Log.ASSERT, "ASSETS", "Assets:");
+            for (String l : cordova.getActivity().getAssets().list(""))
+                Log.println(Log.ASSERT, "ASSETS", "\t" + l);
+        } catch (Exception e) {
+
+        }
+
         flow.initialize(cordova.getActivity(), "1377br.gov.meugovbr.hom.lic");
     }
     private void setThreshold(String param) {
