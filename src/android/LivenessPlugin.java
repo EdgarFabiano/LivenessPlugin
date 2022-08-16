@@ -17,6 +17,8 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import android.util.Log;
+
 public class LivenessPlugin extends CordovaPlugin implements NecFlowHandler {
     private static final int CAMERA_CODE = 1;
     private final NecFlow flow = new NecFlow();
