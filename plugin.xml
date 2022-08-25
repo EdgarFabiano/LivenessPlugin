@@ -2,8 +2,8 @@
 <plugin id="com-livenesscreate-plugins-captureswift" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>LivenessPlugin</name>
     <js-module name="LivenessPlugin" src="www/LivenessPlugin.js">
-    <clobbers target="LivenessPlugin" />
-</js-module>
+        <clobbers target="LivenessPlugin" />
+    </js-module>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="LivenessPlugin">
